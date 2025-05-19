@@ -1,6 +1,6 @@
 set -e
 for dir in v*/; do
-  catalog="${dir}catalog/windows-machine-config-operator/catalog.json"
+  catalog="${dir}catalog/kueue-operator/catalog.json"
   images=$(cat $catalog | jq '. | select(.schema=="olm.bundle")| .relatedImages[].image')
   registries=$(echo "$images" | cut -f1 -d"/"| uniq)
   if [ $(echo "$registries" | wc -l) -ne 1 ];then

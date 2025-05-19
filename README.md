@@ -7,7 +7,7 @@ Each OCP version we support will have a dir under fbc/, i.e. fbc/v4.18.  The dir
 
 On release of a new Kueue Operator, the template files for each supported OCP veersion will need additional entries for the new images in the appropriate channels.  Then the fragement will need to be regenerated with the following command:
 
-opm alpha render-template basic <ocp_version>/catalog-template.json [--migrate-level=bundle-object-to-csv-metadata] > <ocp_version>/catalog/kueue-operator/catalog.json
+$ ./generate-fbc.sh
 
 NOTE: Starting with OCP 4.17 you need the --migrate-level=bundle-object-to-csv-metadata flag. For rendering to older versions of OCP, simply omit the flag.
 
