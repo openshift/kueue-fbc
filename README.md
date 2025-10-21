@@ -14,3 +14,9 @@ NOTE: Starting with OCP 4.17 you need the --migrate-level=bundle-object-to-csv-m
 Note: You need opm version 1.47.0 or higher
 
 You can read more at [Konflux example repo](https://github.com/konflux-ci/olm-operator-konflux-sample/blob/main/docs/konflux-onboarding.md#building-a-file-based-catalog)
+
+### Testing FBC
+
+Once you have a build of the FBC from Konflux you can create a custom catalogsource, apply it to a cluster, then you can search for it and install through the console.  The "catsrc.yaml" file can be used by replacing <imageurl> with the url of the fbc image from Konflux.
+
+Note:If you have any references to internal quay repos in the FBC, you will need a mirrorset.  

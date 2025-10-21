@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+ name:  testindex
+ namespace: openshift-marketplace
+spec:
+ sourceType: grpc
+ image: <imageurl>
+ displayName: Konflux FBC test CatalogSource
+ publisher: Red Hat
