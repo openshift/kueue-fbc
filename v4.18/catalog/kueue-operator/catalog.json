@@ -1,7 +1,7 @@
 {
     "schema": "olm.package",
     "name": "kueue-operator",
-    "defaultChannel": "stable-v1.1"
+    "defaultChannel": "stable-v1.2"
 }
 {
     "schema": "olm.channel",
@@ -52,6 +52,16 @@
     "entries": [
         {
             "name": "kueue-operator.v1.1.0"
+        }
+    ]
+}
+{
+    "schema": "olm.channel",
+    "name": "stable-v1.2",
+    "package": "kueue-operator",
+    "entries": [
+        {
+            "name": "kueue-operator.v1.2.0"
         }
     ]
 }
@@ -758,6 +768,132 @@
         {
             "name": "operand-image",
             "image": "registry.redhat.io/kueue/kueue-rhel9@sha256:dcb9dec563ef3178217e00a544ef0408fb25cd4f3fe155a7e6ad6e6f6ab98613"
+        }
+    ]
+}
+{
+    "schema": "olm.bundle",
+    "name": "kueue-operator.v1.2.0",
+    "package": "kueue-operator",
+    "image": "registry.redhat.io/kueue/kueue-operator-bundle@sha256:005047a1a84c92358df9736f9661136e185b1b9d4d9a2eeeb322aa6cb61d63a1",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "kueue.openshift.io",
+                "kind": "Kueue",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "kueue-operator",
+                "version": "1.2.0"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[\n  {\n    \"apiVersion\": \"kueue.openshift.io/v1\",\n    \"kind\": \"Kueue\",\n    \"metadata\": {\n      \"labels\": {\n        \"app.kubernetes.io/managed-by\": \"kustomize\",\n        \"app.kubernetes.io/name\": \"kueue-operator\"\n      },\n      \"name\": \"cluster\"\n    },\n    \"spec\": {\n      \"config\": {\n        \"integrations\": {\n          \"frameworks\": [\n            \"BatchJob\"\n          ]\n        }\n      },\n      \"managementState\": \"Managed\"\n    }\n  }\n]",
+                    "capabilities": "Basic Install",
+                    "console.openshift.io/operator-monitoring-default": "true",
+                    "createdAt": "2025-11-14T19:51:19Z",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "false",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "false",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "operatorframework.io/cluster-monitoring": "true",
+                    "operatorframework.io/suggested-namespace": "openshift-kueue-operator",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Kubernetes Engine\", \"OpenShift Container Platform\", \"OpenShift Platform Plus\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.37.0",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v4"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "kueues.kueue.openshift.io",
+                            "version": "v1",
+                            "kind": "Kueue",
+                            "displayName": "Kueue",
+                            "description": "Kueue is a cluster resource for configuration of the Kueue operand"
+                        }
+                    ]
+                },
+                "description": "Red Hat build of Kueue is a collection of APIs, based on the [Kueue](https://kueue.sigs.k8s.io/docs/) open source project, that extends Kubernetes to manage access to resources for jobs. Red Hat build of Kueue does not replace any existing components in a Kubernetes cluster, but instead integrates with the existing Kubernetes API server, scheduler, and cluster autoscaler components to determine when a job waits, is admitted to start by creating pods, or should be preempted.",
+                "displayName": "Red Hat build of Kueue",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "kueue-operator"
+                ],
+                "labels": {
+                    "operatorframework.io/arch.amd64": "supported",
+                    "operatorframework.io/arch.arm64": "supported",
+                    "operatorframework.io/arch.ppc64le": "supported",
+                    "operatorframework.io/arch.s390x": "supported"
+                },
+                "links": [
+                    {
+                        "name": "Kueue Operator",
+                        "url": "https://github.com/openshift/kueue-operator"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Node team",
+                        "email": "aos-node@redhat.com"
+                    }
+                ],
+                "maturity": "stable",
+                "minKubeVersion": "1.28.0",
+                "provider": {
+                    "name": "Red Hat, Inc",
+                    "url": "https://github.com/openshift/kueue-operator"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "must-gather",
+            "image": "registry.redhat.io/kueue/kueue-must-gather-rhel9@sha256:0d6fe9adb309e62104deb675c5f1b72a4e62821991f2f673182a025cbaa795d0"
+        },
+        {
+            "name": "",
+            "image": "registry.redhat.io/kueue/kueue-operator-bundle@sha256:005047a1a84c92358df9736f9661136e185b1b9d4d9a2eeeb322aa6cb61d63a1"
+        },
+        {
+            "name": "",
+            "image": "registry.redhat.io/kueue/kueue-rhel9-operator@sha256:0e99e54d7b740518813788ca79def5a31ecaae9c154d9b243afb681c30cb5b66"
+        },
+        {
+            "name": "operand-image",
+            "image": "registry.redhat.io/kueue/kueue-rhel9@sha256:bdf48afa3c62beec7402edddac8803363e793cf74c1c4cf908ae81845296ce3b"
         }
     ]
 }
