@@ -14,8 +14,7 @@ This repository contains File-Based Catalog (FBC) definitions for the Kueue Oper
 ```
 Regenerates catalog.json files for all supported OCP versions. This script:
 - Uses OPM (Operator Package Manager) to render catalog templates
-- For v4.16: Uses standard rendering without migration flags
-- For v4.17+: Uses `--migrate-level=bundle-object-to-csv-metadata` flag
+- Uses `--migrate-level=bundle-object-to-csv-metadata` flag for all supported versions
 
 ### Lint Catalogs
 ```bash
@@ -32,8 +31,6 @@ Currently disabled but contains validation logic for ensuring all bundle images 
 ### Directory Structure
 ```
 .
-├── v4.16/          # OCP 4.16 catalog definitions
-├── v4.17/          # OCP 4.17 catalog definitions
 ├── v4.18/          # OCP 4.18 catalog definitions
 ├── v4.19/          # OCP 4.19 catalog definitions
 ├── v4.20/          # OCP 4.20 catalog definitions
@@ -76,4 +73,4 @@ When releasing a new Kueue Operator version:
 
 - **Source Registry**: `registry.redhat.io/kueue*`
 - **Bundle Images**: Use SHA256 digests for immutable references
-- **Migration Considerations**: OCP 4.17+ requires bundle-object-to-csv-metadata migration
+- **Migration**: Uses `bundle-object-to-csv-metadata` migration level

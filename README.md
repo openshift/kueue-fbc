@@ -9,8 +9,6 @@ On release of a new Kueue Operator, the template files for each supported OCP ve
 
 $ ./generate-fbc.sh
 
-NOTE: Starting with OCP 4.17 you need the --migrate-level=bundle-object-to-csv-metadata flag. For rendering to older versions of OCP, simply omit the flag.
-
 Note: You need opm version 1.47.0 or higher
 
 You can read more at [Konflux example repo](https://github.com/konflux-ci/olm-operator-konflux-sample/blob/main/docs/konflux-onboarding.md#building-a-file-based-catalog)
