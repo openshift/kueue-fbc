@@ -16,6 +16,12 @@ Regenerates catalog.json files for all supported OCP versions. This script:
 - Uses OPM (Operator Package Manager) to render catalog templates
 - Uses `--migrate-level=bundle-object-to-csv-metadata` flag for all supported versions
 
+### Add New OCP Version
+```bash
+./add-ocp-version.sh <version>
+```
+Scaffolds a new OCP version directory by copying from the latest existing version. Example: `./add-ocp-version.sh 4.23` creates `v4.23/` with the catalog template, Containerfile, and catalog.json from the latest version.
+
 ### Lint Catalogs
 ```bash
 ./lint.sh
