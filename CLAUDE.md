@@ -40,6 +40,7 @@ Currently disabled but contains validation logic for ensuring all bundle images 
 ├── v4.18/          # OCP 4.18 catalog definitions
 ├── v4.19/          # OCP 4.19 catalog definitions
 ├── v4.20/          # OCP 4.20 catalog definitions
+├── v4.21/          # OCP 4.21 catalog definitions
 └── .tekton/        # CI/CD pipeline definitions
 ```
 
@@ -73,7 +74,7 @@ When releasing a new Kueue Operator version:
 
 - **Konflux Integration**: Uses Konflux CI system with Tekton pipelines
 - **Renovate**: Automated dependency updates configured in `renovate.json`
-- **Multi-version Support**: Separate pipelines for each OCP version (4.18, 4.19)
+- **Multi-version Support**: Separate pipelines for each OCP version (4.18, 4.19, 4.20, 4.21)
 
 ## Registry and Image Management
 
