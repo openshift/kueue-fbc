@@ -37,7 +37,7 @@ def get_latest_snapshot(component):
         result = subprocess.run(
             [
                 KUBECTL, "get", "snapshots",
-                "-l", f"appstudio.openshift.io/component={component}",
+                "-l", f"appstudio.openshift.io/component={component},pac.test.appstudio.openshift.io/event-type=push",
                 "--sort-by=.metadata.creationTimestamp",
                 "-o", "json",
             ],
