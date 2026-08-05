@@ -1,0 +1,7 @@
+Schema: olm.semver
+GenerateMajorChannels: false
+GenerateMinorChannels: true
+DefaultChannelTypePreference: "minor"
+Stable:
+  Bundles:
+  - Image: registry.redhat.io/kueue/kueue-operator-bundle@sha256:2a2217f0277a39ccccaafc742c06d7b834ae1dd834d749c4b8ad0a4b5e2b01ce
