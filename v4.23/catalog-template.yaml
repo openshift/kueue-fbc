@@ -5,3 +5,4 @@ DefaultChannelTypePreference: "minor"
 Stable:
   Bundles:
   - Image: registry.redhat.io/kueue/kueue-operator-bundle@sha256:2a2217f0277a39ccccaafc742c06d7b834ae1dd834d749c4b8ad0a4b5e2b01ce
+  - Image: registry.redhat.io/kueue/kueue-operator-bundle@sha256:6ec24a9a8679f512b1e4774c41668b4756f25817ba7937cfd280250dc5a38e3a
