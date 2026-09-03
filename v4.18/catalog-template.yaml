@@ -16,3 +16,4 @@ Stable:
   - Image: registry.redhat.io/kueue/kueue-operator-bundle@sha256:eff8cc23c2f37ba4c1a27a622aa87ae0ad3190b95b5c78b064f0605249c6189a
   - Image: registry.redhat.io/kueue/kueue-operator-bundle@sha256:ffdb338c891199dbc2f7a632c99066dc6c17126c51092504baac9513a22ce792
   - Image: registry.redhat.io/kueue/kueue-operator-bundle@sha256:2a2217f0277a39ccccaafc742c06d7b834ae1dd834d749c4b8ad0a4b5e2b01ce
+  - Image: registry.redhat.io/kueue/kueue-operator-bundle@sha256:6ec24a9a8679f512b1e4774c41668b4756f25817ba7937cfd280250dc5a38e3a
