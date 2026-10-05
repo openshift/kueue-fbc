@@ -27,7 +27,7 @@ spec:
     value:
     - linux/x86_64
   - name: dockerfile
-    value: /v4.21/Containerfile.catalog
+    value: Containerfile.catalog
   - name: path-context
     value: v4.21
   pipelineSpec:
