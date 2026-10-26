@@ -1079,7 +1079,7 @@
     "schema": "olm.bundle",
     "name": "kueue-operator.v1.5.0",
     "package": "kueue-operator",
-    "image": "registry.redhat.io/kueue/kueue-operator-bundle@sha256:82b7fae4d94cc5cc5d9b91c36b9808c3437ceb38ae7b874d6cb56359760db662",
+    "image": "registry.redhat.io/kueue/kueue-operator-bundle@sha256:065bb0083bd255dadc8f0b823f3840f045eae85d44ca95f5643ef82a138dae19",
     "properties": [
         {
             "type": "olm.gvk",
@@ -1185,19 +1185,19 @@
     "relatedImages": [
         {
             "name": "must-gather",
-            "image": "registry.redhat.io/kueue/kueue-must-gather-rhel9@sha256:83ff141c63e6f4d5fa808d96d1e7d9c189c25e2828261f277fb0724549b6ff14"
+            "image": "registry.redhat.io/kueue/kueue-must-gather-rhel9@sha256:59381a7202d7698a573831314a33955333a08592dbcdf28e6b0837ecdddcf9d2"
         },
         {
             "name": "",
-            "image": "registry.redhat.io/kueue/kueue-operator-bundle@sha256:82b7fae4d94cc5cc5d9b91c36b9808c3437ceb38ae7b874d6cb56359760db662"
+            "image": "registry.redhat.io/kueue/kueue-operator-bundle@sha256:065bb0083bd255dadc8f0b823f3840f045eae85d44ca95f5643ef82a138dae19"
         },
         {
             "name": "",
-            "image": "registry.redhat.io/kueue/kueue-rhel9-operator@sha256:c522bd0b0517b8566e6821884450f5364d8f4b99c031eb50b0d67b434b6a65eb"
+            "image": "registry.redhat.io/kueue/kueue-rhel9-operator@sha256:87b36f1c6211791f8a372c0d377217e7653a0c1e07e618fd7dc5a7a7b0f07c1c"
         },
         {
             "name": "operand-image",
-            "image": "registry.redhat.io/kueue/kueue-rhel9@sha256:c9475feae8c093d961bbba999806718c194356b570474ff27526287e61d4bdec"
+            "image": "registry.redhat.io/kueue/kueue-rhel9@sha256:6a688d343b3997dd11556d1f4e04b3141f6560fb1a39a5daff863eadc04c8934"
         }
     ]
 }
